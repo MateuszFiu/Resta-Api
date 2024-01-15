@@ -12,7 +12,7 @@ class people extends Model
     protected $fillable = [
     'name',
     'surname',
-    'phonnumber',
+    'phonenumber',
     'street',
     'city',
     ];
