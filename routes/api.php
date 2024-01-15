@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\peopleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('testing', function(){
-return 'test';
-});
-
-
+Route::get('people/MateuszFiutak/310534', [peopleController::class, 'index']);
+Route::get('people/{MateuszFiutak/310534}', [peopleController::class, 'show']);
+Route::post('people/MateuszFiutak/310534', [peopleController::class, 'store']);
+Route::put('people/{MateuszFiutak/310534}', [peopleController::class, 'update']);
